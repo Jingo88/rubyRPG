@@ -1,0 +1,3 @@
+# Ruby RPG
+
+##### Kind of bored and decided to redo a VERY old assignment. Making a RPG game in the terminal using Ruby. Maybe I'll add more to this markdown later...
