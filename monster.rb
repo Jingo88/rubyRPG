@@ -1,8 +1,21 @@
 class Monster
+
+	attr_accessor :type, :atkType, :hp
+
 	def initialize(type, atkType, hp)
 		@type = type,
-		@atkType = atkType
+		@atkType = atkType,
 		@hp = hp
-		@atkRoll = Math.random
+	end
+
+	def atkRoll(x)
+		@atkRoll = rand(0..x)		
+	end
+
+	def dmgRoll(x)
+		@dmgRoll = rand(0..x)
 	end
 end
+
+
+
