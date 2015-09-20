@@ -1,10 +1,10 @@
 class Monster
 
-	attr_accessor :type, :atkType, :hp
+	attr_accessor :race, :weapon, :hp
 
-	def initialize(type, atkType, hp)
-		@type = type,
-		@atkType = atkType,
+	def initialize(race, weapon, hp)
+		@race = race
+		@weapon = weapon
 		@hp = hp
 	end
 

@@ -17,6 +17,7 @@ require_relative('game.rb')
 
 Game = Game.new
 goblin = Monster.new("goblin", "sword", 9)
+bandit = Monster.new("human", "sword", 11)
 
 puts "Hello Adventurer, would you like to start your quest?(yes or no)"
 
