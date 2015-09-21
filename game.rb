@@ -23,7 +23,8 @@ class Game
 		gets.chomp
 	end
 
-	def battle
-		
+	def battle(x,y)
+		# where x will be either the monster attack or player attack, y will be their armor
+		#also put in logic to decrease hp
 	end
 end

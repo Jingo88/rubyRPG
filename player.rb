@@ -21,10 +21,13 @@ class Player
 		}
 	end
 
-	def attack
+	def attack(y)
 		@weapon 
 		if @weapon == "short sword"
-			atkRoll(5)
+			if atkRoll(8) > y.armor
+				dmg = dmgRoll(8)
+				puts "You hit them for #{dmg}"
+			end
 		end
 	end
 

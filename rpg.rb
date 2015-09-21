@@ -14,8 +14,12 @@ require_relative('player.rb')
 require_relative('monster.rb')
 require_relative('game.rb')
 
-
 Game = Game.new
+
+goblin = Monster.new("goblin", "sword", 9, 4)
+bandit = Monster.new("human", "sword", 11, 5)
+vampire = Monster.new("vampire", "teeth", 20, 7)
+orc = Monster.new("orc", 'mace', 15, 6)
 
 puts "Hello Adventurer, would you like to start your quest?(yes or no)"
 
@@ -45,7 +49,7 @@ puts "3. some other adventure\n\n"
 
 travel = gets.chomp
 
-# attack = player.attack
+attack = player.attack("goblin")
 
 binding.pry
 
