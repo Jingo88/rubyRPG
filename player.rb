@@ -1,3 +1,4 @@
+require 'pry'
 class Player 
 
 	attr_accessor :name, :race, :gender, :level, :weapon, :armor, :hp, :stats
@@ -18,6 +19,21 @@ class Player
 			:wisdom => 10,
 			:charisma => 10
 		}
+	end
+
+	def attack
+		if @weapon == "shortsword"
+			binding.pry
+			atkRoll(5)
+		end
+	end
+
+	def atkRoll(x)
+		@atkRoll = rand(0..x)
+	end
+
+	def dmgRoll(x)
+		@dmgRoll = rand(0..x)
 	end
 
 end

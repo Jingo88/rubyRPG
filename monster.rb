@@ -17,5 +17,10 @@ class Monster
 	end
 end
 
+goblin = Monster.new("goblin", "sword", 9)
+bandit = Monster.new("human", "sword", 11)
+vampire = Monster.new("vampire", "teeth", 20)
+orc = Monster.new("orc", 'mace', 15)
+
 
 

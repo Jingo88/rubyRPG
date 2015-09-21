@@ -22,4 +22,8 @@ class Game
 		puts "What is your character's gender?"
 		gets.chomp
 	end
+
+	def battle
+		
+	end
 end
