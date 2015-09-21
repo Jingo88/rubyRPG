@@ -7,6 +7,7 @@ class Monster
 		@weapon = weapon
 		@hp = hp
 		@armor = armor
+		@dead = false
 	end
 
 	def atkRoll(x)

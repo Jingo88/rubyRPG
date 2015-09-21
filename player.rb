@@ -24,9 +24,16 @@ class Player
 	def attack(y)
 		@weapon 
 		if @weapon == "short sword"
-			if atkRoll(8) > y.armor
+			if atkRoll(8) >= y.armor
 				dmg = dmgRoll(8)
-				puts "You hit them for #{dmg}"
+				y.hp = y.hp - dmg
+				if y.hp > 0
+					puts "You hit them for #{dmg}"
+				elsif y.hp <= 0
+					puts "You killed the #{y.race}"
+				end
+			else
+				puts "Your attack missed, you better hope you don't die"
 			end
 		end
 	end
