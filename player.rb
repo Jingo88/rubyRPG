@@ -22,8 +22,8 @@ class Player
 	end
 
 	def attack
-		if @weapon == "shortsword"
-			binding.pry
+		@weapon 
+		if @weapon == "short sword"
 			atkRoll(5)
 		end
 	end
