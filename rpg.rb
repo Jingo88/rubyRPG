@@ -2,10 +2,12 @@ require 'pry'
 require_relative('player.rb')
 require_relative('monster.rb')
 require_relative('travel.rb')
+require_relative('battle.rb')
 require_relative('game.rb')
 
 Game = Game.new
 Travel = Travel.new
+Battle = Battle.new
 
 orc = Monster.new("orc", 'mace', 15, 6)
 
@@ -53,9 +55,14 @@ elsif travel =="TWO"
 		playInit = player.initiative
 		gobOneInit = goblinOne.initiative
 		gobTwoInit = goblinTwo.initiative
-		case (playInit, gobOneInit, gobTwoInit)
-		when condition
-			
+
+		puts Battle.turns({
+			"player" => playInit,
+			"goblinOne" => gobOneInit,
+			"goblinTwo" => gobTwoInit
+			})	
+
+		
 	else
 		puts "Please just type roll and then press enter"
 	end
