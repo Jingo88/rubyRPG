@@ -1,17 +1,7 @@
-#User should make a character
-#User should fight monsters
-#User should be able to travel
-#User should live or die
-#User should have weapons / armor / statistics
-#class Game = having the intro and story line
-#class User = having the user input their characters information and housing their characters information
-#Define a bunch of classes and then run program
-#Classes to define - game / user / monster
-#Battle Class
-
 require 'pry'
 require_relative('player.rb')
 require_relative('monster.rb')
+require_relative('travel.rb')
 require_relative('game.rb')
 
 Game = Game.new
@@ -43,11 +33,11 @@ player = Player.new(name, race, gender)
 
 puts "Hello #{name}, you begin in the town of Newer Yorkshire. You begin with a  #{player.weapon} and wearing #{player.armor}. Your stats look like this \n\n #{player.stats}  yatta yatta you have to go fight a monster\n\n"
 
-puts "1. go to the castle to save the princess\n\n"
+puts "Enter One to go to the castle to save the princess\n\n"
 
-puts "2. go to the black forest to find the missing children\n\n"
+puts "Enter Two go to the black forest to find the missing children\n\n"
 
-puts "3. some other adventure\n\n"
+puts "Enter Three to free the town bridge from a group of bandits\n\n"
 
 travel = gets.chomp
 

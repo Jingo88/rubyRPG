@@ -1,3 +1,3 @@
 # Ruby RPG
 
-##### Kind of bored today and decided to redo a VERY old assignment. Making a RPG game in the terminal using Ruby. Maybe I'll add more to this markdown later...
+This is a command line application. Single player RPG game written in Ruby. Git clone this repo and run "ruby rpg.rb" in your terminal to play. 
