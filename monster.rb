@@ -10,6 +10,10 @@ class Monster
 		@dead = false
 	end
 
+	def initiative
+		@initiaive = rand(0..20)
+	end
+
 	def atkRoll(x)
 		@atkRoll = rand(0..x)		
 	end

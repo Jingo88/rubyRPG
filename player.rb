@@ -21,6 +21,10 @@ class Player
 		}
 	end
 
+	def initiative
+		@initiative =  rand(0..20) + (stats[:dexterity]/5)
+	end
+
 	def attack(y)
 		@weapon 
 		if @weapon == "short sword"

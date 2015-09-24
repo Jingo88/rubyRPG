@@ -5,14 +5,9 @@ require_relative('travel.rb')
 require_relative('game.rb')
 
 Game = Game.new
+Travel = Travel.new
 
-goblin = Monster.new("goblin", "sword", 9, 4)
-bandit = Monster.new("human", "sword", 11, 5)
-vampire = Monster.new("vampire", "teeth", 20, 7)
 orc = Monster.new("orc", 'mace', 15, 6)
-
-#use this array for multiple enemies during battle
-monstarr = [];
 
 puts "Hello Adventurer, would you like to start your quest?(yes or no)"
 
@@ -43,15 +38,35 @@ puts "Enter Three to free the town bridge from a group of bandits\n\n"
 travel = gets.chomp.upcase
 
 if travel == "ONE"
+	puts Travel.castle
+	vampire = Monster.new("vampire", "teeth", 20, 7)
 
 elsif travel =="TWO"
+	puts Travel.forest
+	puts "Two goblins are standing next to a fire, the children are tied to a tree nearby. The goblins take notice of you and grab their scimitars. ROLL FOR INITIAIVE (You can type roll now...)"
+	goblinOne = Monster.new("goblin", "sword", 9, 4)
+	goblinTwo = Monster.new("goblin", "sword", 9, 4)
 
+	init = gets.chomp.downcase
+
+	if init == "roll"
+		playInit = player.initiative
+		gobOneInit = goblinOne.initiative
+		gobTwoInit = goblinTwo.initiative
+		case (playInit, gobOneInit, gobTwoInit)
+		when condition
+			
+	else
+		puts "Please just type roll and then press enter"
+	end
 elsif travel =="THREE"
-
+	puts Travel.bridge
+	banditOne = Monster.new("human", "sword", 11, 5)
+	banditTwo = Monster.new("human", "sword", 11, 5)
 else
 	puts "Sorry that isn't a choice, please enter One, Two, or Three"
 end
 
-player.attack(goblin)
+# player.attack(goblin)
 
 binding.pry
