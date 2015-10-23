@@ -19,7 +19,7 @@ class Battle
 #who's turn is it? if it is the goblins turn they should either attack or flee
 #if it is the players turn you need to allow the player to choose attack or flee
 #if it is the players turn they need to choose which goblin to attack
-		binding.pry
+		# binding.pry
 	end
 
 

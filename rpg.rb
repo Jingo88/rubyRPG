@@ -1,3 +1,6 @@
+# =======================================================================
+# Require your Shiettttt
+# =======================================================================
 require 'pry'
 require_relative('player.rb')
 require_relative('monster.rb')
@@ -5,6 +8,9 @@ require_relative('travel.rb')
 require_relative('battle.rb')
 require_relative('game.rb')
 
+# =======================================================================
+# Make new objects to use
+# =======================================================================
 Game = Game.new
 Travel = Travel.new
 Battle = Battle.new
@@ -15,6 +21,9 @@ puts "Hello Adventurer, would you like to start your quest?(yes or no)"
 
 start = gets.chomp
 
+# =======================================================================
+# store user input from "Game" methods to pass into Player Class
+# =======================================================================
 if start == "yes"
 	puts "First we must make your character\n"
 	name = Game.getName
@@ -27,16 +36,22 @@ if start == "yes"
 		puts "I'm sorry you must type in yes or no\n"		
 end
 
+# =======================================================================
+# Create the player and tell them the story and their character stats
+# =======================================================================
 player = Player.new(name, race, gender)
 
 puts "Hello #{name}, you are currently in the town of Newer Yorkshire. You find yourself weilding a #{player.weapon} and wearing #{player.armor}. Your current  stats are \n\n #{player.stats}  \n\nThe town of Newer Yorkshire has fallen in grave trouble. Princess Nicki Minaj has been kidnapped. Not only that but the innkeepers children Little Bow Wow and Little Romeo have gone missing. They were last seen stick fighting in the forest. Not only that but businesses have gone under because travelers are being turned away from Newer Yorkshire due to a group of bandits known as Nuevo Ocho Degrees hovering around the main bridge. Which task would you like to aid the town with first?\n\n"
 
-puts "Enter One to go to the black castle to save Princess Nicki Minaj\n\n"
+puts "Enter One to go to the pink castle to save Princess Nicki Minaj\n\n"
 
-puts "Enter Two go to the black forest to find the innkeepers missing children\n\n"
+puts "Enter Two go to the Not Green forest to find the innkeepers missing children\n\n"
 
 puts "Enter Three to free the town bridge from a group of bandits\n\n"
 
+# =======================================================================
+# Save user input as Travel, run the value through a control flow statement to see where the user will go
+# =======================================================================
 travel = gets.chomp.upcase
 
 if travel == "ONE"
@@ -76,4 +91,4 @@ end
 
 # player.attack(goblin)
 
-binding.pry
+# binding.pry

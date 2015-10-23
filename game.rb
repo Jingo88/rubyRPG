@@ -3,11 +3,6 @@ class Game
 	def initialize
 	end
 
-	def start
-		puts 'Hello Adventurer, type "Create" and then enter to begin making your character'
-		create = gets.chomp()
-	end
-
 	def getName
 		puts "What is your characters name?"
 		gets.chomp
