@@ -55,6 +55,12 @@ puts "Enter Three to free the town bridge from a group of bandits\n\n"
 travel = gets.chomp.upcase
 
 if travel == "ONE"
+# =======================================================================
+# Try to move these into the Travel Class. Work on this later. let's figure out how to do battle
+# =======================================================================
+	# vampire = Monster.new("vampire", "teeth", 20, 7)
+	# Travel.castle(vampire)
+
 	puts Travel.castle
 	vampire = Monster.new("vampire", "teeth", 20, 7)
 
